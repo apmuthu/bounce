@@ -1,0 +1,32 @@
+<link href="main.css" rel="stylesheet" type="text/css" />
+<form id="form1" name="form1" method="post" action="login.php?do=login">
+  <div align="center">
+    <p><img src="../images/small_logo.gif" width="188" height="75" /></p>
+    <p><span class="Norm-BLD">CLIENT ACCESS PORTAL
+    </span><br />
+      <br />
+    </p>
+  </div>
+  <table width="250" border="0" align="center" cellpadding="3" cellspacing="0">
+    <tr>
+      <td colspan="3" bgcolor="#333333" class="MAINTABLE">Login to Client Access Portal</td>
+    </tr>
+    <tr>
+      <td width="67" height="26" bgcolor="#CCCCCC" class="Norm">Username</td>
+      <td height="26" colspan="2" bgcolor="#CCCCCC" class="Norm"><label>
+        <input name="username" type="text" class="TXT-SML" id="username" />
+      </label></td>
+    </tr>
+    <tr>
+      <td height="26" bgcolor="#CCCCCC" class="Norm">Password</td>
+      <td width="163" height="26" bgcolor="#CCCCCC" class="Norm"><label>
+        <input name="password" type="password" class="TXT-SML" id="password" />
+      </label></td>
+      <td width="52" height="26" align="right" bgcolor="#CCCCCC" class="Norm"><input name="Login" type="submit" class="TXT-SML" id="Login" value="Login" /></td>
+    </tr>
+    <tr>
+      <td colspan="3" bgcolor="#333333" class="Norm">&nbsp;</td>
+    </tr>
+  </table>
+  <p><?php include('./html/bot.html'); ?></p>
+</form>

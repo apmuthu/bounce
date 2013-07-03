@@ -1,0 +1,109 @@
+<link href="../btfs.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+<!--
+.style5 {font-family: Arial, Helvetica, sans-serif}
+.style6 {font-size: 12px}
+.style8 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style9 {color: #000000}
+.style10 {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; }
+-->
+</style> <form id="form1" name="form1" method="post" action="add_client.php">
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="Menu_item"><div align="left"></div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+     
+        <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#000000" class="style3">
+          <tr>
+            <td colspan="2" background="./images/table_head_bg.png" bgcolor="#333333" class="style5 Menu_item_white"><span class="style8">&nbsp;Client Manager</span></td>
+            </tr>
+          
+          <tr>
+            <td colspan="2" bgcolor="#FFFFFF" class="plain_textBOLD"><table width="100%" cellpadding="3" cellspacing="1" bgcolor="#333333">
+              <tr class="style4">
+                <td height="22" colspan="2" background="./images/dark_blue.png" bgcolor="#CCCCCC" class="style5 Menu_item_white"><span class="style8">New Client </span></td>
+                </tr>
+              <tr class="style4">
+            <td width="92" height="22" background="./images/table_over.png" bgcolor="#CCCCCC" class="plain_textBOLD"><div align="left" class="style4 style5 style6 style9">
+              <div align="left">Client Type </div>
+            </div></td>
+            <td width="583" height="22" bgcolor="#FFFFFF" class="plain_textBOLD style3 style5 style6 style9">&nbsp;
+              <select name="type" id="type">
+              <option value="Business" selected="selected">Business</option>
+              <option value="Residential">Residential</option>
+              <option value="Contract">Contract</option>
+              </select>            </td>
+          </tr>
+          <tr class="style4">
+            <td height="22" background="./images/table_over.png" bgcolor="#CCCCCC" class="plain_textBOLD"><div align="left" class="style4 style5 style6 style9">
+              <div align="left">Client Name </div>
+            </div></td>
+            <td height="22" bgcolor="#FFFFFF" class="plain_textBOLD style3 style5 style6 style9">&nbsp;
+              <input name="name" type="text" id="name" /></td>
+          </tr>
+          <tr class="style4">
+            <td height="22" background="./images/table_over.png" bgcolor="#CCCCCC" class="plain_textBOLD style3 style5"><div align="left" class="style10">Owner Name </div></td>
+            <td height="22" bgcolor="#FFFFFF" class="plain_textBOLD style3 style5 style6 style9">&nbsp;
+              <input name="owner" type="text" id="owner" /></td>
+          </tr>
+          <tr class="style4">
+            <td height="22" background="./images/table_over.png" bgcolor="#CCCCCC" class="plain_textBOLD"><div align="left" class="style4 style5 style6 style9">
+              <div align="left">Address</div>
+            </div></td>
+            <td height="22" bgcolor="#FFFFFF" class="plain_textBOLD style3 style5 style6 style9">&nbsp;
+              <input name="address" type="text" id="address" size="35" /></td>
+          </tr>
+          <tr class="style4">
+            <td height="22" background="./images/table_over.png" bgcolor="#CCCCCC" class="plain_textBOLD"><p align="left" class="style4 style5 style6 style9">City</p>              </td>
+            <td height="22" bgcolor="#FFFFFF" class="plain_textBOLD style3 style5 style6 style9">&nbsp;
+              <input name="city" type="text" id="city" size="20" /></td>
+          </tr>
+          <tr class="style4">
+            <td height="22" background="./images/table_over.png" bgcolor="#CCCCCC" class="plain_textBOLD"><div align="left" class="style4 style5 style6 style9">Zip</div></td>
+            <td height="22" bgcolor="#FFFFFF" class="plain_textBOLD style3 style5 style6 style9">&nbsp;
+              <input name="zip" type="text" id="zip" size="5" maxlength="5" /></td>
+          </tr>
+          <tr class="style4">
+            <td height="22" background="./images/table_over.png" bgcolor="#CCCCCC" class="plain_textBOLD"><div align="left" class="style4 style5 style6 style9">
+              <div align="left">State</div>
+            </div></td>
+            <td height="22" bgcolor="#FFFFFF" class="plain_textBOLD style3 style5 style6 style9">&nbsp;
+              <input name="state" type="text" id="state" size="20" maxlength="20" /> 
+              (FL, AL, NY..)</td>
+          </tr>
+          <tr class="style4">
+            <td height="22" background="./images/table_over.png" bgcolor="#CCCCCC" class="plain_textBOLD style3 style5"><div align="left" class="style10">Email</div></td>
+            <td height="22" bgcolor="#FFFFFF" class="plain_textBOLD style3 style5 style6 style9">&nbsp;
+              <input name="email" type="text" id="email" /></td>
+          </tr>
+          <tr class="style4">
+            <td height="22" background="./images/table_over.png" bgcolor="#CCCCCC" class="plain_textBOLD style3 style5"><div align="left" class="style10">Phone</div></td>
+            <td height="22" bgcolor="#FFFFFF" class="plain_textBOLD style3 style5 style6 style9">&nbsp;1-(
+              <input name="phone1" type="text" id="phone1" size="3" maxlength="3" />
+              )
+              -
+              <input name="phone2" type="text" id="phone2" size="3" maxlength="3" />
+              -
+              <input name="phone3" type="text" id="phone3" size="4" maxlength="4" />
+              ext
+              <input name="ext" type="text" id="ext" size="10" maxlength="10" /></td>
+          </tr>
+          <tr>
+            <td colspan="2" bgcolor="#3366CC" class="plain_textBOLD"><div align="right">
+              <input name="Save" type="submit" class="plain_text" id="Save" value="Save" />
+            </div></td>
+            </tr></table></td>
+          </tr>
+        </table>
+  
+      <p class="plain_text">&nbsp;</p>
+    </div></td>
+  </tr>
+</table>
+      </form>

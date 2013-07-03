@@ -1,0 +1,74 @@
+<link href="./btfs.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+<!--
+.style5 {font-family: Arial, Helvetica, sans-serif}
+.style6 {font-size: 12px}
+.style8 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style9 {color: #000000}
+.style10 {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; }
+-->
+</style> <form id="form1" name="form1" method="post" action="tech_change.php?func=change&id=<?php echo $row_edit[id]; ?>">
+<table width="500" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="Menu_item"><div align="left"></div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+     
+        <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#000000" class="style3">
+          <tr>
+            <td colspan="2" align="left" background="./images/table_head_bg.png" bgcolor="#333333" class="style5 Menu_item_white"><span class="style8">&nbsp;System User Manager</span></td>
+            </tr>
+          
+          <tr>
+            <td colspan="2" bgcolor="#FFFFFF" class="plain_textBOLD"><table width="100%" cellpadding="3" cellspacing="1" bgcolor="#333333">
+              <tr class="style4">
+            <td height="22" colspan="2" align="left" background="./images/dark_blue.png" bgcolor="#CCCCCC" class="style8">Edit User</td>
+            </tr>
+          <tr class="style4">
+            <td width="97" height="22" align="left" bgcolor="#FFFFFF" class="plain_textBOLD"><div align="left" class="style4 style5 style6 style9">
+              <div align="left">Tech Name </div>
+            </div></td>
+            <td width="378" height="22" align="left" bgcolor="#FFFFFF" class="plain_textBOLD style3 style5 style6 style9"><input name="name" type="text" id="name" value="<?php echo $row_edit[name];?>" /></td>
+          </tr>
+          <tr class="style4">
+            <td height="22" align="left" bgcolor="#FFFFFF" class="plain_textBOLD style3 style5"><div align="left" class="style10">Tech Username</div></td>
+            <td height="22" align="left" bgcolor="#FFFFFF" class="plain_textBOLD style3 style5 style6 style9"><input name="username" type="text" id="username" value="<?php echo $row_edit[username];?>" /></td>
+          </tr>
+          <tr class="style4">
+            <td height="22" align="left" bgcolor="#FFFFFF" class="plain_textBOLD"><div align="left" class="style4 style5 style6 style9">
+              <div align="left">Tech Email</div>
+            </div></td>
+            <td height="22" align="left" bgcolor="#FFFFFF" class="plain_textBOLD style3 style5 style6 style9"><input name="email" type="text" id="email" value="<?php echo $row_edit[email];?>" size="35" /></td>
+          </tr>
+          <tr class="style4">
+            <td height="22" align="left" bgcolor="#FFFFFF" class="plain_textBOLD"><div align="left" class="style4 style5 style6 style9">
+              <div align="left">User Type</div>
+            </div></td>
+            <td height="22" align="left" bgcolor="#FFFFFF" class="plain_textBOLD style3 style5 style6 style9"><label>
+              <select name="type" id="type">
+              <option selected value="<?php echo $row_edit[type];?>">Choose</option>
+                <option value="admin">Admin</option>
+                <option value="tech">Tech</option>
+                <option value="manager">Manager</option>
+              </select> - <?php echo $row_edit[type];?>
+            </label></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="right" bgcolor="#CCCCCC" class="plain_textBOLD"><label>
+              <input type="submit" name="Save" id="Save" value="Save">
+            </label></td>
+            </tr></table></td>
+          </tr>
+        </table>
+  
+      <p class="plain_text">&nbsp;</p>
+    </div></td>
+  </tr>
+</table>
+      </form>

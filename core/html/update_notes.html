@@ -1,0 +1,42 @@
+<style type="text/css">
+<!--
+.style1 {	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style2 {font-family: Arial, Helvetica, sans-serif}
+.style3 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+</head>
+
+<body>
+<form action="update_tickets.php?func=update&id=<?php echo "$tid"; ?>" method="post"><table width="500" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+  <tr>
+    <td background="./images/table_head_bg.png" bgcolor="#333333"><span class="style1">Update Notes</span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#333333">
+      <tr>
+        <td width="22%" bgcolor="#CCCCCC" class="style2">Tech Notes</td>
+        <td width="78%" bgcolor="#FFFFFF" class="style2"><textarea name="notes" id="notes" cols="45" rows="6"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" bgcolor="#3366CC"><div align="center">
+          <input type="submit" name="button" id="button" value="Add Notes" />
+        </div></td>
+      </tr>
+    </table></td>
+  </tr>
+</table></form>
+</body>
+</html>

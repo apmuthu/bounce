@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title><?php echo "$client_name"; ?> - New Ticket</title>
+<style type="text/css">
+<!--
+.style2 {font-family: Arial, Helvetica, sans-serif}
+.style3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+.style5 {font-family: Arial, Helvetica, sans-serif; font-size: 14px; }
+-->
+</style>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="add.php?id=<?php echo"$client_id"; ?>&func=new">
+  <p>&nbsp;</p>
+  <p align="center" class="style3">Online Ticketing System</p>
+  <table width="550" border="0" align="center" cellpadding="0" cellspacing="2">
+    <tr>
+      <td class="style2"><div align="right"><span class="style5">Name</span></div></td>
+      <td colspan="3"><input type="text" name="name" id="name" /></td>
+    </tr>
+    <tr>
+      <td class="style2"><div align="right"><span class="style5">Phone or ext</span></div></td>
+      <td colspan="3"><input type="text" name="phone" id="phone" /></td>
+    </tr>
+    <tr>
+      <td width="168" align="left" valign="middle" class="style5"><div align="right"><span class="style5">Ticket Title</span></div></td>
+      <td width="174" align="left" valign="middle" class="style5"><span class="style2">
+        <input name="subject" type="text" id="subject" size="29" maxlength="30" />
+      </span></td>
+      <td width="99" align="left" valign="middle" class="style5"><div align="right">Priority</div></td>
+      <td width="99" align="left" valign="top" bgcolor="#CCCCCC" class="style5"><span class="style2">
+         &nbsp;
+        <select name="priority" id="priority">
+          <option value="Normal">Normal</option>
+          <option value="High">High</option>
+          <option value="Low">Low</option>
+        </select>
+      </span></td>
+    </tr>
+    <tr>
+      <td class="style2"><div align="right"><span class="style5">What service do you need?</span></div></td>
+      <td colspan="3"><span class="style2">
+        <textarea name="description" cols="45" rows="6" wrap="physical" id="description"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td class="style2">&nbsp;</td>
+      <td colspan="3" align="right"><input type="submit" name="button" id="button" value="Create Ticket" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

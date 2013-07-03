@@ -1,0 +1,48 @@
+<?php
+
+$email_message = "
+<style type=\"text/css\">
+<!--
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.style2 {font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 12px; }
+.style3 {font-size: 12px}
+.style4 {font-size: 12px; font-family: Arial, Helvetica, sans-serif; }
+.style5 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+
+<body>
+<table width=\"450\" border=\"0\" cellspacing=\"0\" cellpadding=\"3\">
+  <tr>
+    <td width=\"87\">PHPBounce</td>
+    <td width=\"265\"><div align=\"center\"><span class=\"style1\">Email Notification</span></div></td>
+    <td width=\"48\" class=\"style1\"><span class=\"style5\"><?php echo \"$client_name\"; ?></span></td>
+  </tr>
+  <tr>
+    <td class=\"style2\"><div align=\"right\">CLIENT</div></td>
+    <td colspan=\"2\" class=\"style5\">".$client_name."</td>
+  </tr>
+  <tr>
+    <td class=\"style2\"><div align=\"right\">SUBJECT</div></td>
+    <td colspan=\"2\" class=\"style5\">".$subject."</td>
+  </tr>
+  <tr>
+    <td class=\"style2\"><div align=\"right\">WHO / TIME</div></td>
+    <td colspan=\"2\" class=\"style5\">".$name." / ".$datesql."</td>
+  </tr>
+  <tr>
+    <td class=\"style2\"><div align=\"right\">PHONE / EXT</div></td>
+    <td colspan=\"2\" class=\"style5\">".$phone." or ".$phone_client."</td>
+  </tr>
+  <tr>
+    <td class=\"style2\"><div align=\"right\">PROBLEM</div></td>
+    <td colspan=\"2\" class=\"style5\">".$description."</td>
+  </tr>
+</table>
+</body>
+</html>";
+

@@ -1,0 +1,35 @@
+<link href="./clientlogon/html/main.css" rel="stylesheet" type="text/css">
+<form name="form1" method="post" action="invoice.php?id=<?php echo"$invid"; ?>&func=add">
+  <table width="600" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#333333">
+    <tr>
+      <td colspan="4" bgcolor="#333333" class="MAINTABLE">Add To Invoice </td>
+    </tr>
+    <tr>
+      <td width="83" bgcolor="#FFFFFF" class="Norm-BLD">Item</td>
+      <td width="385" bgcolor="#FFFFFF" class="Norm-BLD">Description</td>
+      <td width="23" bgcolor="#FFFFFF" class="Norm-BLD">Qty</td>
+      <td width="81" bgcolor="#FFFFFF" class="Norm-BLD">Price</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle" bgcolor="#FFFFFF" class="Norm"><label>
+        <select name="item" id="item">
+          <option>Choose</option>
+          <option>Fee</option>
+          <option>Part</option>
+          <option>Service</option>
+        </select>
+      </label></td>
+      <td align="center" valign="middle" bgcolor="#FFFFFF" class="Norm"><textarea name="description" id="description" cols="45" rows="3"></textarea></td>
+      <td align="center" valign="middle" bgcolor="#FFFFFF" class="Norm"><label>
+        <input name="qty" type="text" id="qty" size="4" maxlength="4">
+      </label></td>
+      <td align="center" valign="middle" bgcolor="#FFFFFF" class="Norm">$ 
+      <input name="price" type="text" id="price" size="5" maxlength="7"></td>
+    </tr>
+    <tr>
+      <td colspan="4" align="center" valign="middle" bgcolor="#FFFFFF"><label>
+        <input type="submit" name="add" id="add" value="Add">
+      </label></td>
+    </tr>
+  </table>
+</form>

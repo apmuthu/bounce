@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style1 {
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.style2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+}
+.style4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+-->
+</style>
+</head>
+
+<body>
+<div align="left">
+  <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="21%"><a href="index.php"><img src="./images/small_logo.gif" width="188" height="75" border="0" /></a></td>
+      <td width="79%" align="center" valign="middle"><span class="style4">ACTIVITY REPORT</span></td>
+    </tr>
+  </table>
+
+<table width="900" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+  <tr>
+    <td width="642" align="left" valign="middle" bgcolor="#333333"><span class="style1"><?php echo "$client_name"; ?></span></td>
+    <td width="239" align="right" valign="middle" bgcolor="#333333"><span class="style1"><?php echo "Month of: $dates"; ?></span></td>
+  </tr>
+    <tr>
+   
+    <td colspan="2"><table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#666666">
+      <tr>
+        <td width="70" bgcolor="#CCCCCC" class="style2"><div align="center">Date</div></td>
+        <td width="48" bgcolor="#CCCCCC" class="style2"><div align="center">Time</div></td>
+        <td width="36" bgcolor="#CCCCCC" class="style2"><div align="center">Hours</div></td>
+        <td width="1000" bgcolor="#CCCCCC" class="style2"><div align="center">Description</div></td>
+        <td width="25" bgcolor="#CCCCCC" class="style2"><div align="center">Paid</div></td>
+        <td width="74" bgcolor="#CCCCCC" class="style2"><div align="center">Parts</div></td>
+        <td width="70" bgcolor="#CCCCCC" class="style2"><div align="center">Invoice</div></td>
+      </tr>
+      <?php include('./activity_report_month_client.php'); ?>
+      <tr>
+        <td width="134" bgcolor="#CCCCCC" class="style2" colspan="2">Total Hours Billed:</td>
+        <td width="48" bgcolor="#CCCCCC" class="style2"><div align="center"><?php echo "$total_hours"; ?></div></td>
+        <td width="36" bgcolor="#CCCCCC" class="style2"colspan="8"><div align="center"></div></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

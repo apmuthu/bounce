@@ -1,0 +1,28 @@
+<link href="./html/main.css" rel="stylesheet" type="text/css" />
+<form id="form1" name="form1" method="get" action="">
+<br />
+<table width="500" border="0" align="center" cellpadding="3" cellspacing="0">
+    <tr>
+      <td colspan="3" bgcolor="#333333" class="MAINTABLE">Reports - Choose a date</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="Norm">This is a client activity report which shows all the current activity. Please note that information on this report can change at any time and is not to be used for any comparison. Your final report with the correct information will be submitted to you at the end of the month.</td>
+    </tr>
+    <tr>
+      <td colspan="3" bgcolor="#CCCCCC" class="Norm"><div align="center">
+        <select name="mo" class="TXT-SML" id="mo">
+          <option value="<?php echo $this_mo; ?>"><?php echo $this_mo; ?></option>
+          <option value="<?php echo $last_mo; ?>"><?php echo $last_mo; ?></option>
+        </select>
+        <select name="yr" class="TXT-SML" id="yr">
+          <option value="<?php echo $this_yr - 1; ?>"><?php echo $this_yr - 1; ?></option>
+          <option selected value="<?php echo "$this_yr"; ?>"><?php echo "$this_yr"; ?></option>
+        </select>
+        <input name="do" type="submit" class="TXT-SML" id="do" value="Submit" />
+      </div></td>
+    </tr>
+    <tr>
+      <td colspan="3" class="Norm">&nbsp;</td>
+    </tr>
+  </table>
+</form>

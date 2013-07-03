@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.style2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+-->
+</style>
+</head>
+
+<body><form id="form1" name="form1" method="post" action="./activity_report.php?func=view"></form><form id="form1" name="form1" method="post" action="./activity_report.php?func=view2">
+  <table width="370" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+    <tr>
+    <td background="./images/table_head_bg.png" bgcolor="#333333"><span class="style2">Client Activity Reports Presentable</span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+      <tr>
+        <td background="./images/dark_blue.png"><span class="style2">Select</span></td>
+      </tr>
+      <tr>
+        <td align="center" valign="middle" bgcolor="#CCCCCC"><?php include('./funcs/get_clients.php');?>
+              <?php include('./funcs/get_month_year.php');?>
+              <input type="submit" name="button" id="button" value="View" /></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+
+</form><form id="form1" name="form1" method="post" action="./activity_report.php?func=nonpaid">
+  <table width="370" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+  <tr>
+    <td background="./images/table_head_bg.png" bgcolor="#333333"><span class="style2">NON PAID Activity Report</span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+      <tr>
+        <td background="./images/dark_blue.png"><span class="style2">Select</span></td>
+      </tr>
+      <tr>
+        <td align="center" valign="middle" bgcolor="#CCCCCC"><?php include('./funcs/get_clients.php');?>
+                            <input type="submit" name="button" id="button" value="View" /></td>
+      </tr>
+    </table></td>
+  </tr>
+</table></form>
+<form id="form1" name="form1" method="post" action="./activity_report.php?func=nonpaidall">
+  <table width="370" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+  <tr>
+    <td background="./images/table_head_bg.png" bgcolor="#333333"><span class="style2">NON PAID ALL</span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+      <tr>
+        <td background="./images/dark_blue.png"><span class="style2">Select</span></td>
+      </tr>
+      <tr>
+        <td align="center" valign="middle" bgcolor="#CCCCCC"><input type="submit" name="button" id="button" value="View" /></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+  <p>&nbsp;</p>
+<p>&nbsp;</p>
+</form>
+</body>
+</html>
+

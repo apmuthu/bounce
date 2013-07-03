@@ -1,0 +1,45 @@
+<?php include('../funcs/popup.html'); ?>
+</head>
+
+<link href="main.css" rel="stylesheet" type="text/css">
+<body>
+<br>
+    <table border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+      <tr class="MAINTABLE">
+        <td bgcolor="#333333"><span class="style1">Ticket Viewer</span></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"><table width="650" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#333333">
+          <tr>
+            <td bgcolor="#CCCCCC" class="Norm">Ticket Number</td>
+            <td colspan="2" bgcolor="#FFFFFF" class="Norm"><span class="style2"><?php echo "$row_tik[id]"; ?></span></td>
+          </tr>
+          <tr>
+            <td class="Norm" bgcolor="#CCCCCC">Status</td>
+            <td colspan="2" class="Norm" <?php if($row_tik[status] == "Open") { echo "bgcolor='#B3FFB3'"; } if($row_tik[status] == "Closed") { echo "bgcolor='#F2C2BD'"; } if($row_tik[status] == "Pending") { echo "bgcolor='#EEEEBB'"; }?>><?php echo "$row_tik[status]"; ?></td>
+          </tr>
+          <tr class="Norm">
+            <td bgcolor="#CCCCCC" class="style6">Timestamp</td>
+            <td valign="middle" bgcolor="#FFFFFF" class="style5s"><?php echo "$row_tik[date_start]"; ?> | <?php echo "$row_tik[date_stop]"; ?></td>
+          </tr>
+          
+          <tr class="Norm">
+            <td width="23%" bgcolor="#CCCCCC" class="style6">Client</td>
+            <td width="38%" bgcolor="#FFFFFF" class="style5s"><span class="style2"><?php echo "$clients_name"; ?></span></td>
+            </tr>
+          
+          <tr class="Norm">
+            <td bgcolor="#CCCCCC" class="style6">Subject</td>
+            <td bgcolor="#FFFFFF" class="style5s"><span class="style2"><?php echo "$row_tik[name]"; ?></span></td>
+          </tr>
+          <tr>
+            <td colspan="2" bgcolor="#CCCCCC" class="style2"><strong class="Norm-BLD"> Problem Notes</strong></td>
+            </tr>
+          <tr>
+            <td colspan="2" align="center" valign="middle" bgcolor="#FFFFFF" class="style2"><textarea name="description2" id="description2" cols="100" rows="7"><?php echo "$row_tik[notes]"; ?></textarea></td>
+            </tr>
+        </table>
+        </td>
+      </tr>
+</table>
+<p>&nbsp;</p>

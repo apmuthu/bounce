@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style1 {font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.style3 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style4 {font-weight: bold}
+-->
+</style>
+</head>
+
+<body>
+<table width="575" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+  <tr>
+    <td background="../../images/table_head_bg.png" bgcolor="#333333"><span class="style1">How to?</span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" cellpadding="3" cellspacing="1" bgcolor="#333333">
+      <tr class="style4">
+        <td height="22" background="../images/dark_blue.png" bgcolor="#CCCCCC" class="style1">Quick Help</td>
+        </tr>
+      <tr>
+        <td bgcolor="#CCCCCC" class="plain_textBOLD"><p class="style2"><strong class="style3">How to make a new invoice:</strong><br />
+          1. <strong>Add Client </strong>uner<strong> Manager</strong> menu<br />
+          2. Make a <strong>New invoice</strong> under <strong>Reports</strong> Menu
+  <br />
+        </p>
+          <p class="style2"><span class="style3"><strong>How to allow people to access payment portal</strong>?</span><br />
+            1. Go to Manager and go to <strong>Client Portal Admin</strong>.<br />
+            2. Setup a new user for an existing client. 
+If you don't have a client listed there you will have to add<br />
+t
+hem into the clients list under the Manager. </p>
+          <p class="style3"><br />
+        </p>
+<p class="style2"><strong>PHPBounce Updates:</strong>
+  <?php
+  $lines = file('http://www.exitbs.com/phpbounce/updates.html');
+
+// Loop through our array, show HTML source as HTML source; and line numbers too.
+foreach ($lines as $line_num => $line) {
+    echo $line;
+}
+
+?></p></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

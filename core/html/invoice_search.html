@@ -1,0 +1,91 @@
+<?php include('./html/menu.html');
+?>
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.style2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+-->
+</style>
+</head>
+
+<body><form id="form1" name="form1" method="get" action="./invoice.php">
+<table width="500" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+  <tr>
+    <td background="./images/table_head_bg.png" bgcolor="#333333"><span class="style2">Find Invoice</span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+      <tr>
+        <td background="./images/dark_blue.png"><span class="style2">Enter Invoice Number</span></td>
+      </tr>
+      <tr>
+        <td align="center" valign="middle" bgcolor="#CCCCCC"><input name="id" type="text" id="id" maxlength="10">
+          <input type="submit" name="button2" id="button2" value="View" /></td>
+      </tr>
+    </table>
+      </td>
+  </tr>
+</table></form>
+
+<form id="form1" name="form1" method="post" action="./invoice.php?func=client_list">
+<table width="500" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+  <tr>
+    <td background="./images/table_head_bg.png" bgcolor="#333333"><span class="style2">Find Invoice</span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+      <tr>
+        <td background="./images/dark_blue.png"><span class="style2">Display By Client</span></td>
+      </tr>
+      <tr>
+        <td align="center" valign="middle" bgcolor="#CCCCCC"><?php include('./funcs/get_clients.php'); ?><input type="submit" name="button2" id="button2" value="View" /></td>
+      </tr>
+    </table>
+      </td>
+  </tr>
+</table></form>
+<form id="form1" name="form1" method="post" action="./invoice.php?func=not_paidcl">
+<table width="500" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+  <tr>
+    <td background="./images/table_head_bg.png" bgcolor="#333333"><span class="style2">Outstanding Invoices </span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+      <tr>
+        <td background="./images/dark_blue.png"><span class="style2">Display By Client</span></td>
+      </tr>
+      <tr>
+        <td align="center" valign="middle" bgcolor="#CCCCCC"><?php include('./funcs/get_clients.php'); ?><input type="submit" name="button2" id="button2" value="View" /></td>
+      </tr>
+    </table>
+      </td>
+  </tr>
+</table></form>
+<form id="form1" name="form1" method="post" action="./invoice.php?func=not_paid">
+<table width="500" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+  <tr>
+    <td background="./images/table_head_bg.png" bgcolor="#333333"><span class="style2">All Outstanding Invoices </span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+      <tr>
+        <td background="./images/dark_blue.png"><span class="style2">Display All </span></td>
+      </tr>
+      <tr>
+        <td align="center" valign="middle" bgcolor="#CCCCCC"><input type="submit" name="button2" id="button2" value="View" /></td>
+      </tr>
+    </table>
+      </td>
+  </tr>
+</table></form>
+</body>
+</html>
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>New Invoice <?php echo "$invid"; ?></title>
+
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.style21 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:200;
+}
+.style2 {font-family: Arial, Helvetica, sans-serif}
+.style3 {font-size: 12px}
+.style22 {color: #000000}
+.style23 {font-size: 12px; color: #000000; }
+-->
+</style>
+</head>
+<span class="style21"><a href='./index.php'>HOME</a> | <a href='invoice.php?func=print&id=<?php echo "$invid"; ?>'>PRINT</a> | <a href='invoice.php?func=find'>FIND INVOICE</a> | <a href='invoice.php?func=onlinepayment&id=<?php echo "$invid"; ?>'>PROCESS PAYMENT</a></span>
+<body><br />
+<table width="800" border="0" align="left" cellpadding="0" cellspacing="2" class="style2">
+  <tr>
+    <td width="188"><img src="./images/small_logo.gif" width="188" height="75" /></td>
+    <td width="336"> <div align="center"></div></td>
+    <td width="268"><table width="95%" border="0" align="right" cellpadding="3" cellspacing="2" bgcolor="#000000">
+      <tr>
+        <td height="25" colspan="3" bgcolor="#FFFFFF"><div align="right"><span class="style1">INVOICE</span></div></td>
+        </tr>
+      <tr>
+        <td width="33%" bgcolor="#FFFFFF">Date</td>
+        <td width="67%" colspan="2" bgcolor="#FFFFFF"><?php echo "$print_date"; ?></td>
+        </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">Invoice #</td>
+        <td colspan="2" bgcolor="#FFFFFF"><?php echo "$invid"; ?></td>
+        </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">Paid</td>
+        <td colspan="2" bgcolor="<?php echo "$bg_col"; ?>"><a href=./invoice.php?id=<?php echo "$invid"; ?>&func=payment&status=<?php echo "$paid_st"; ?>><?php echo "$paid_status"; ?></a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="3"><table width="253" border="0" align="left" cellpadding="0" cellspacing="0" bgcolor="#000000">
+      <tr>
+        <td width="133" bgcolor="#FFFFFF" class="style2 style3 style22"><?php echo "$org_name"; ?></td>
+        <td width="97" bgcolor="#FFFFFF" class="style2 style3"><div align="right" class="style22"><span class="style2 style3 style22"><?php echo "$org_phone"; ?></span></div></td>
+      </tr>
+      <tr>
+        <td colspan="2" bgcolor="#FFFFFF" class="style23"><span class="style2 style3 style22"><?php echo "$org_address"; ?></span></td>
+      </tr>
+      <tr>
+        <td colspan="2" bgcolor="#FFFFFF" class="style23"><span class="style2 style3 style22"><?php echo "$org_city"; ?></span>, <span class="style2 style3 style22"><?php echo "$org_state"; ?></span><span class="style2 style3 style22"> <?php echo "$org_zip"; ?></span></td>
+      </tr>
+    </table>
+      <br />
+      <p></p>
+      <br />
+      <br />
+        <br />
+      <table width="250" border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#000000">
+      <tr>
+        <td bgcolor="#FFFFFF" class="style3">Bill To </td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"><table width="253" border="0" align="left" cellpadding="0" cellspacing="0" bgcolor="#000000">
+          <tr>
+            <td width="133" bgcolor="#FFFFFF" class="style3"><a href="./view_client.php?id=<?php echo "$cid"; ?>" class="style22"><?php echo "$client_name"; ?></a></td>
+            <td width="97" bgcolor="#FFFFFF" class="style2 style3"><div align="right" class="style23"><?php echo "$client_phone"; ?></div></td>
+          </tr>
+          <tr>
+            <td bgcolor="#FFFFFF" class="style3"><span class="style22"><?php echo "$client_address"; ?></span></td>
+            <td bgcolor="#FFFFFF"><span class="style22"></span></td>
+          </tr>
+          <tr>
+            <td bgcolor="#FFFFFF" class="style23"><?php echo "$client_city"; ?>, <?php echo "$client_state"; ?><?php echo "$client_zip"; ?></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="style23"><a href="invoice.php?func=change_client&amp;id=<?php echo "$invid"; ?>">Change</a></div></td>
+          </tr>
+        </table>
+          <span class="style3"><br />
+          </span>
+          <p></p></td>
+        </tr>
+    </table>
+      <span class="style3"><br />
+      </span>
+    <p>&nbsp;</p>    </td>
+  </tr>
+  <tr>
+    <td colspan="3"><table width="100%" border="0" align="left" cellpadding="2" cellspacing="2" bgcolor="#000000">
+      <tr>
+        <td width="50" bgcolor="#FFFFFF" class="style1 style3">Item</td>
+        <td width="488" bgcolor="#FFFFFF" class="style1 style3">Description</td>
+        <td width="25" bgcolor="#FFFFFF" class="style1 style3">Qty</td>
+        <td width="56" bgcolor="#FFFFFF" class="style1 style3">Price</td>
+        <td width="122" bgcolor="#FFFFFF" class="style1 style3">Amount</td>
+        <td width="17" bgcolor="#FFFFFF" class="style1 style3"><div align="center">X</div></td>
+      </tr>
+	<?php include('./funcs/get_invoice_items.php'); ?>
+
+    </table>
+      <br />
+      <p></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="center"><a href="invoice.php?func=other&amp;id=<?php echo "$invid"; ?>">Add Item</a> | </div></td>
+    <td><table width="250" border="0" align="right" cellpadding="2" cellspacing="2" bgcolor="#000000">
+      <tr>
+        <td width="89" bgcolor="#FFFFFF" class="style3">Subtotal</td>
+        <td width="143" bgcolor="#FFFFFF">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF" class="style3">Tax**</td>
+        <td bgcolor="#FFFFFF">$<?php echo "$totaltax"; ?></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF" class="style1">Total</td>
+        <td bgcolor="#FFFFFF">$<?php echo "$total"; ?></td>
+      </tr>
+    </table>
+      <br />
+      <p></p></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="style23">** Tax is only applied to parts.</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<br />
+<br />
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="1">
+  <tr>
+    <td colspan="3" valign="top" class="Norm-BLD"><div align="center"><?php echo $my_id_name; ?><br />
+      <br />
+    </div>
+    <div align="center"></div></td>
+  </tr>
+  <tr>
+    <td valign="top"><table width="200" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+      <tr>
+        <td bgcolor="#333333" class="MAINTABLE">Paid Invoices</td>
+      </tr><?php include('./get_paid_inv.php'); ?>
+    </table></td>
+    <td valign="top"><table width="200" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+      <tr>
+        <td bgcolor="#333333" class="MAINTABLE">Invoices Due</td>
+      </tr><?php include('./get_new_inv.php'); ?>
+    </table></td>
+    <td valign="top"><table width="200" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#333333">
+      <tr>
+        <td bgcolor="#333333" class="MAINTABLE">Late Invoices</td>
+      </tr><?php include('./get_late_inv.php'); ?>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>

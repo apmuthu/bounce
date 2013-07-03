@@ -1,0 +1,44 @@
+<link href="../btfs.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+<!--
+.style5 {font-family: Arial, Helvetica, sans-serif}
+.style6 {font-size: 12px}
+.style8 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style9 {color: #000000}
+.style10 {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; }
+-->
+</style> <form id="form1" name="form1" method="post" action="edit_client.php?func=update&id=<?php echo "$cid"; ?>">
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="Menu_item"><div align="left"></div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+     
+        <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#000000" class="style3">
+          <tr>
+            <td colspan="2" align="left" background="./images/table_head_bg.png" bgcolor="#333333" class="style5 Menu_item_white"><span class="style8">&nbsp;System User Manager</span></td>
+            </tr>
+          
+          <tr>
+            <td colspan="2" bgcolor="#FFFFFF" class="plain_textBOLD"><table width="100%" cellpadding="3" cellspacing="1" bgcolor="#333333">
+              <tr class="style4">
+                <td height="22" align="left" background="./images/dark_blue.png" bgcolor="#CCCCCC" class="style5">Name</td>
+                <td align="left" background="./images/dark_blue.png" bgcolor="#CCCCCC" class="style5">Username</td>
+                <td align="left" background="./images/dark_blue.png" bgcolor="#CCCCCC" class="style5">Account Type</td>
+                <td align="left" background="./images/dark_blue.png" bgcolor="#CCCCCC" class="style5">Functions</td>
+              </tr>
+          
+            <?php include('./tech_disp.php'); ?></table></td>
+          </tr>
+        </table>
+  
+      <p class="plain_text">&nbsp;</p>
+    </div></td>
+  </tr>
+</table>
+      </form>
