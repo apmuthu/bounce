@@ -31,22 +31,21 @@
     <td bgcolor="#FFFFFF"><table width="100%" cellpadding="3" cellspacing="1" bgcolor="#333333">
       <tr class="style4">
         <td height="22" background="../images/dark_blue.png" bgcolor="#CCCCCC" class="style1">Quick Help</td>
-        </tr>
+      </tr>
       <tr>
         <td bgcolor="#CCCCCC" class="plain_textBOLD"><p class="style2"><strong class="style3">How to make a new invoice:</strong><br />
-          1. <strong>Add Client </strong>uner<strong> Manager</strong> menu<br />
-          2. Make a <strong>New invoice</strong> under <strong>Reports</strong> Menu
-  <br />
+          1. <strong><a href="./add_client.php">Add Client</a></strong> under<strong> Manager</strong> menu<br />
+          2. Make a <strong><a href="./invoice.php?func=new">New invoice</a></strong> under <strong>Reports</strong> Menu  <br />
         </p>
-          <p class="style2"><span class="style3"><strong>How to allow people to access payment portal</strong>?</span><br />
-            1. Go to Manager and go to <strong>Client Portal Admin</strong>.<br />
-            2. Setup a new user for an existing client. 
-If you don't have a client listed there you will have to add<br />
-t
-hem into the clients list under the Manager. </p>
-          <p class="style3"><br />
+        <p class="style2"><span class="style3"><strong>How to allow people to access payment portal</strong>?</span><br />
+            1. Go to Manager and go to <strong><a href="./client_manager.php">Client Portal Admin</a></strong>.<br />
+            2. If you don't have a client listed there you will have to <strong><a href="./add_client.php">add them into the clients list</a></strong> under the Manager.<br />
+            3. <strong><a href="./new_client_logon.php">Setup a new user</a></strong> for an existing client.
+		</p>
+        <p class="style3"><br />
         </p>
-<p class="style2"><strong>PHPBounce Updates:</strong>
+<!--
+        <p class="style2"><strong>PHPBounce Updates:</strong>
   <?php
   $lines = file('http://www.exitbs.com/phpbounce/updates.html');
 
@@ -55,7 +54,10 @@ foreach ($lines as $line_num => $line) {
     echo $line;
 }
 
-?></p></td>
+?>
+        </p>
+-->
+        </td>
       </tr>
     </table></td>
   </tr>
