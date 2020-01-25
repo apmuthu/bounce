@@ -43,6 +43,7 @@ Change the permissions to full read write for the connect.php file in the main f
 Run the installer program under the installer folder (http://mysite.com/bounce/installer/)
 Follow the instructions for your database, the installer will do the rest.
 Passwords are stored as MD5 hash.
+Tickets => Search functionality not available yet.
 
 You can change the logo to your own custom logo in the images folder. Look for logo_small.gif and logo_small.png
 
